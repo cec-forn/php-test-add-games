@@ -1,5 +1,7 @@
 <?php
 
+$title = "What is this website?";
+
 require_once 'layout/header.php';
 require_once 'layout/navbar.php';
 

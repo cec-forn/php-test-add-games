@@ -1,5 +1,7 @@
 <?php
 
+$title = "Your games";
+
 require_once 'layout/header.php';
 require_once 'layout/navbar.php';
 

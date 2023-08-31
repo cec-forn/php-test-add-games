@@ -5,21 +5,27 @@
         <li><a href="/what-is-this-website.php">What is this thing?</a></li>
     </ul>
 
-    <a href="#"><img src="/assets/login-logoff-logo.svg" alt=""></a>
-    <div>
+    <img src="/assets/login-logoff-logo.svg" alt="">
+
+    <?php if (isset($_GET['error'])) { ?>
+        <div class="error">
+    <?php echo ErrorCode::getErrorMessage(intval($_GET['error'])); ?>
+        </div>
+    <?php } ?>
+
+    <div class="login">
         <p>Connect:</p>
 
-        <form method="post">
+        <form action="auth.php" method="post">
             <label for="email">Email:</label>
             <input type="email" name="email">
 
             <label for="password">Password:</label>
             <input type="password" name="password">
 
-            <button type="submit">Submit</button>
+            <input type="submit" value="Log in">
         </form>
 
-        <p>Don't have an account yet? Sign up here</p>
-        <a href="#">Sign up</a>
+        <p>Don't have an account yet? Sign up <a href="/sign-up.php">here</a></p>
     </div>
 </nav>
