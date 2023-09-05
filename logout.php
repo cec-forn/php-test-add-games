@@ -5,4 +5,4 @@ session_start();
 $_SESSION = [];
 session_destroy();
 
-Utils::redirect('index.php');
+header('index.php');

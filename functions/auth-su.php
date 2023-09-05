@@ -12,8 +12,8 @@ try {
 // Récupération des données de formulaire
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
-$email = $_POST['email'];
 $birthDate = $_POST['birthDate'];
+$email = $_POST['email'];
 $password = $_POST['passwordHash'];
 
 // Validation des données
@@ -25,9 +25,9 @@ $stmtInsert = $pdo->prepare("INSERT INTO users(firstname, lastname, birth_date, 
 $stmtInsert->execute([
     $firstname,
     $lastname,
-    $email,
     $birthDate,
+    $email,
     $password
 ]);
 
-echo "ok";
+header('Location: /index.php');
