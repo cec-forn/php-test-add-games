@@ -7,3 +7,5 @@
 6. Added the structure of 'browse-games.php'.
 7. Started the HTML form to add games.
 8. Developed the foreach to display the games in `browse-games.php` with the help of <a href="https://www.wdb24.com/php-shopping-cart-display-products-from-database/">this</a> tutorial.
+9. Added a log out button (i totally forgot about this one until today...).
+10. 
