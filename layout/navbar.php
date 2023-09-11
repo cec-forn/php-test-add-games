@@ -1,12 +1,19 @@
+<?php 
+
+require_once 'classes/ErrorCode.php';
+
+?>
+
 <nav>
     <ul>
         <li><a href="/index.php">Welcome</a></li>
+        <li><a href="/adding-games.php">Add games</a></li>
         <li><a href="/browse-games.php">Browse games</a></li>
         <li><a href="/your-games.php">Your games</a></li>
         <li><a href="/what-is-this-website.php">What is this thing?</a></li>
     </ul>
 
-    <a href="/functions/log-out.php"><img src="/assets/login-logoff-logo.svg" alt=""></a>
+    <a href="/functions/logout.php"><img src="/assets/login-logoff-logo.svg" alt=""></a>
 
     <?php if (isset($_GET['error'])) { ?>
         <div class="error">

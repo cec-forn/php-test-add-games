@@ -1,7 +1,7 @@
 <?php
 
 function getDbConnection(): PDO {
-    $dbSettings = parse_ini_file('db.ini');
+    $dbSettings = parse_ini_file(__DIR__ . '/../db.ini');
 
     [
         'DB_HOST' => $host,

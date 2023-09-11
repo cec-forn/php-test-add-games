@@ -9,13 +9,13 @@ class ErrorCode
     {
         switch ($errorCode) {
             case self::INVALID_CREDENTIALS:
-                $result = "Les identifiants fournis n'ont pas permis de vous identifier";
+                $result = "Email or password doesn't match database infos.";
                 break;
             case self::LOGIN_FIELDS_REQUIRED:
-                $result = "Tous les champs du formulaire sont obligatoires";
+                $result = "All fields are required.";
                 break;
             default:
-                $result = "Une erreur est survenue";
+                $result = "An error has occured.";
         }
 
         return $result;

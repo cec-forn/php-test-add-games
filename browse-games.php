@@ -3,6 +3,7 @@
 require_once 'layout/header.php';
 require_once 'layout/navbar.php';
 require_once 'functions/db.php';
+require_once 'functions/add-library.php';
 
 try {
     $pdo = getDbConnection();
@@ -11,11 +12,7 @@ try {
     exit;
 }
 
-$query = "SELECT * FROM games;";
-
-$handle = $pdo->prepare($query);
-$handle->execute();
-$getAllGames = $handle->fetchAll(PDO::FETCH_ASSOC);
+$getAllGames = [];
 
 ?>
 
@@ -29,6 +26,7 @@ $getAllGames = $handle->fetchAll(PDO::FETCH_ASSOC);
                 <h2><?php echo $el['name']; ?></h2>
                 <h3><?php echo $el['release_date'] ?></h3>
             </div>
+            <a href="add-library.php?item=<?php echo $el['id']; ?>&user=<?php echo $userId['id']; ?>">Add to library</a>
         </article>
     <?php } ?>
 </section>

@@ -18,6 +18,8 @@ require_once 'layout/navbar.php';
 
 <?php
 
+var_dump($_SESSION);
+
 require_once 'layout/footer.php';
 
 ?>

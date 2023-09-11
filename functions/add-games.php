@@ -22,4 +22,4 @@ $stmtInsertd->execute([
     $image
 ]);
 
-echo "The game has been succesfully added to the website and your library.";
+echo "The game has been succesfully added to the website.";
